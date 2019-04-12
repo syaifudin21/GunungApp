@@ -28,7 +28,7 @@ class _MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
     return Scaffold(
       appBar: new AppBar(
         title: Text("Ensiklopedia Gunung Indonesia"),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.teal[900],
         actions: <Widget>[
           GestureDetector(
             onTap: () => Navigator.of(context).push(new MaterialPageRoute(
@@ -61,7 +61,7 @@ class _MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
         ],
       ),
       bottomNavigationBar: new Material(
-        color: Colors.teal,
+        color: Colors.teal[900],
         child: new TabBar(
           controller: controller,
           tabs: <Widget>[
