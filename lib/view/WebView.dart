@@ -13,10 +13,17 @@ class WebView extends StatelessWidget {
       url: url,
       appBar: AppBar(
         title: Text(judul),
+        backgroundColor: Colors.teal,
       ),
       withJavascript: true,
       withLocalStorage: true,
-      withZoom: true,
+      withZoom: false,
+      initialChild: Container(
+        color: Colors.redAccent,
+        child: const Center(
+          child: Text('Waiting.....'),
+        ),
+      ),
     );
   }
 }

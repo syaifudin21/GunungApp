@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Parsing Json',
+      title: 'Ensiklopedia Gunung Indonesia',
       home: new MyHome(),
     );
   }

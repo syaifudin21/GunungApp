@@ -28,11 +28,11 @@ class _MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
     return Scaffold(
       appBar: new AppBar(
         title: Text("Ensiklopedia Gunung Indonesia"),
+        backgroundColor: Colors.teal,
         actions: <Widget>[
           GestureDetector(
-             onTap: () => Navigator.of(context).push(
-                        new MaterialPageRoute(
-                            builder: (BuildContext context) => new MyProfil())),
+            onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+                builder: (BuildContext context) => new MyProfil())),
             child: Padding(
               padding: const EdgeInsets.all(15.0),
               child: Icon(
@@ -41,6 +41,17 @@ class _MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
             ),
           )
         ],
+        bottom: new TabBar(
+          controller: controller,
+          tabs: <Widget>[
+            new Tab(
+              text: "Berita",
+            ),
+            new Tab(
+              text: "Gunung",
+            ),
+          ],
+        ),
       ),
       body: new TabBarView(
         controller: controller,
@@ -50,17 +61,17 @@ class _MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
         ],
       ),
       bottomNavigationBar: new Material(
-        color: Colors.blue,
+        color: Colors.teal,
         child: new TabBar(
           controller: controller,
           tabs: <Widget>[
             new Tab(
               icon: new Icon(Icons.notifications_none),
-              text: "Berita",
+              // text: "Berita",
             ),
             new Tab(
               icon: new Icon(Icons.filter_hdr),
-              text: "Gunung",
+              // text: "Gunung",
             ),
           ],
         ),
