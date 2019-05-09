@@ -13,7 +13,6 @@ class WebView extends StatelessWidget {
       url: url,
       appBar: AppBar(
         title: Text(judul),
-        backgroundColor: Colors.teal[900],
       ),
       withJavascript: true,
       withLocalStorage: true,

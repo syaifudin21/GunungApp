@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gng/view/MyBerita.dart' as berita;
 import 'package:gng/view/MyGunung.dart' as gunung;
 import 'package:gng/view/MyProfil.dart';
+import 'package:gng/view/Search.dart';
 
 class MyHome extends StatefulWidget {
   @override
@@ -26,20 +27,21 @@ class _MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Icon(
+          Icons.search,
+          color: Colors.white,
+        ),
+        onPressed: () => Navigator.of(context).push(
+            MaterialPageRoute(builder: (BuildContext context) => new SearchGunung())),
+      ),
       appBar: new AppBar(
         title: Text("Ensiklopedia Gunung Indonesia"),
-        backgroundColor: Colors.teal[900],
         actions: <Widget>[
-          GestureDetector(
-            onTap: () => Navigator.of(context).push(new MaterialPageRoute(
-                builder: (BuildContext context) => new MyProfil())),
-            child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Icon(
-                Icons.person_pin,
-              ),
-            ),
-          )
+          IconButton(
+            icon: Icon(Icons.account_circle), onPressed: () => Navigator.of(context).push(
+            MaterialPageRoute(builder: (BuildContext context) => new MyProfil() )),
+          )          
         ],
         bottom: new TabBar(
           controller: controller,
@@ -60,22 +62,22 @@ class _MyHomeState extends State<MyHome> with SingleTickerProviderStateMixin {
           new gunung.MyGunung(),
         ],
       ),
-      bottomNavigationBar: new Material(
-        color: Colors.teal[900],
-        child: new TabBar(
-          controller: controller,
-          tabs: <Widget>[
-            new Tab(
-              icon: new Icon(Icons.notifications_none),
-              // text: "Berita",
-            ),
-            new Tab(
-              icon: new Icon(Icons.filter_hdr),
-              // text: "Gunung",
-            ),
-          ],
-        ),
-      ),
+      // bottomNavigationBar: new Material(
+      //   color: Colors.teal[900],
+      //   child: new TabBar(
+      //     controller: controller,
+      //     tabs: <Widget>[
+      //       new Tab(
+      //         icon: new Icon(Icons.notifications_none),
+      //         // text: "Berita",
+      //       ),
+      //       new Tab(
+      //         icon: new Icon(Icons.filter_hdr),
+      //         // text: "Gunung",
+      //       ),
+      //     ],
+      //   ),
+      // ),
     );
   }
 }

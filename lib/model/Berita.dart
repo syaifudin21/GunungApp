@@ -3,13 +3,13 @@ class Berita {
   final String gunung;
   final String alamat;
   final String judul;
-  final String text_pembuka;
+  final String textPembuka;
   final String berita;
   final String lampiran;
-  final String created_at;
-  final String updated_at;
+  final String createdAt;
+  final String updatedAt;
 
-  Berita({this.id, this.gunung, this.alamat, this.judul, this.text_pembuka, this.berita, this.created_at, this.lampiran, this.updated_at});
+  Berita({this.id, this.gunung, this.alamat, this.judul, this.textPembuka, this.berita, this.createdAt, this.lampiran, this.updatedAt});
 
   factory Berita.fromJson(Map<String, dynamic> json) {
     return Berita(
@@ -17,10 +17,11 @@ class Berita {
         gunung: json['gunung'],
         alamat: json['alamat'],
         judul: json['judul'],
-        text_pembuka: json['text_pembuka'],
+        textPembuka: json['text_pembuka'],
         berita: json['berita'],
         lampiran: json['lampiran'],
-        created_at: json['created_at'],
+        createdAt: json['created_at'],
+        updatedAt: json['updated_at']
     );
   }
 }
