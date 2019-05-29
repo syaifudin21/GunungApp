@@ -18,7 +18,6 @@ class WebView extends StatelessWidget {
       withLocalStorage: true,
       withZoom: false,
       initialChild: Container(
-        color: Colors.redAccent,
         child: Center(child: CircularProgressIndicator())
       ),
     );
