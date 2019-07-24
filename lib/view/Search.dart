@@ -87,7 +87,7 @@ class _SearchGunungState extends State<SearchGunung> {
       subtitle: Text(_notesForDisplay[index].alamat + " - Status "+_notesForDisplay[index].status,),
        onTap: () => Navigator.of(context).push(
                         new MaterialPageRoute(
-                            builder: (BuildContext context) => new WebView(url: url+_notesForDisplay[index].id.toString(), judul: _notesForDisplay[index].nama,))),
+                            builder: (BuildContext context) => new WebViewFlutter(url: url+_notesForDisplay[index].id.toString(), judul: _notesForDisplay[index].nama,))),
     );
   }
 }

@@ -26,7 +26,7 @@ class MyBerita extends StatelessWidget{
                     subtitle: Text(snapshot.data[i].textPembuka),
                     onTap: () => Navigator.of(context).push(
                         new MaterialPageRoute(
-                            builder: (BuildContext context) => new WebView(url: url+snapshot.data[i].id.toString(), judul: snapshot.data[i].judul,))),
+                            builder: (BuildContext context) => new WebViewFlutter(url: url+snapshot.data[i].id.toString(), judul: snapshot.data[i].judul,))),
                   );
                 },
               );
